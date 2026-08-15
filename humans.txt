@@ -1,0 +1,22 @@
+/* HUMANS.txt */
+/* humanstxt.org */
+
+/* TEAM */
+Site: Thiyagi Tools
+URL: https://www.thiyagi.com/
+Last update: 2026-08-15
+Standards: HTML5, CSS3, JavaScript
+Components: PHP, MySQL
+
+/* CONTRIBUTORS */
+Designer: Thiyagi Team
+Developer: Thiyagi Team
+Tester: Thiyagi Team
+
+/* THANKS */
+Thanks to all our users and supporters!
+
+/* SITE */
+Components: Calculators, Converters, Utilities, Tools
+Language: English
+Charset: UTF-8
