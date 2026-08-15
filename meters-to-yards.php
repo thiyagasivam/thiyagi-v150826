@@ -1,25 +1,8 @@
 <?php
-ob_start();
+$pageTitle = 'Meters to Yards Converter 2026 | Length Conversion Tool | Free Calculator';
+$pageDescription = 'Convert meters to yards instantly with our 2026 accurate length converter. Perfect for sports, construction, and distance measurements.';
+$pageKeywords = 'meters to yards converter 2026, length conversion calculator, meter yard converter, sports measurements, construction calculator';
 include 'header.php';
-$header_content = ob_get_clean();
-
-// Insert title and meta tags into the head section
-$title = 'Meters to Yards Converter 2026 | Length Conversion Tool | Free Calculator';
-$description = 'Convert meters to yards instantly with our 2026 accurate length converter. Perfect for sports, construction, and distance measurements.';
-$keywords = 'meters to yards converter 2026, length conversion calculator, meter yard converter, sports measurements, construction calculator';
-$canonical = 'https://www.thiyagi.com/meters-to-yards';
-
-$meta_tags = '<title>' . htmlspecialchars($title) . '</title>' . "\n";
-$meta_tags .= '<meta name="description" content="' . htmlspecialchars($description) . '">' . "\n";
-$meta_tags .= '<meta name="keywords" content="' . htmlspecialchars($keywords) . '">' . "\n";
-
-// Replace the canonical URL and add our meta tags
-$header_content = str_replace(
-    $meta_tags,
-    $header_content
-);
-
-echo $header_content;
 ?>
 
 <div class="min-h-screen bg-gradient-to-br from-emerald-50 to-green-100 py-8">

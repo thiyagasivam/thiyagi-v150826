@@ -1,16 +1,9 @@
-<?php include 'header.php'; ?>
-
 <?php
-// SEO-friendly settings
-$page_title = "Twitter Card Generator";
-$page_description = "Generate Twitter Cards for your website or app with this easy-to-use tool.";
-$page_keywords = "Twitter Card, Twitter Meta Tags, SEO, Social Media, App Cards";
-$page_url = "https://yourdomain.com/twitter-card-generator";
+$pageTitle = 'Twitter Card Generator | Create SEO Meta Tags for Twitter 2026';
+$pageDescription = 'Generate professional Twitter Card meta tags for your website. Free tool to create summary, large image, and app cards for Twitter/X sharing.';
+$pageKeywords = 'Twitter Card generator, Twitter meta tags, social media cards, Twitter SEO, Open Graph, X cards, social sharing';
+include 'header.php';
 ?>
-
-    <title><?php echo $page_title; ?></title>
-    <meta name="description" content="<?php echo $page_description; ?>">
-    <meta name="keywords" content="<?php echo $page_keywords; ?>">
 
     <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">

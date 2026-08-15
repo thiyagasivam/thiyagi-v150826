@@ -1,7 +1,9 @@
-<?php include 'header.php';?>
-
-<title>My Profile - Thiyagi</title>
-<meta name="description" content="Your Thiyagi user profile. View your account details and manage your preferences.">
+<?php
+$pageTitle = 'My Profile - Thiyagi | User Account & Settings';
+$pageDescription = 'Access your Thiyagi Tools user profile. View account details, manage preferences, and track your saved calculations.';
+$pageKeywords = 'user profile, account settings, Thiyagi profile, user account';
+include 'header.php';
+?>
 
 <style>
   .profile-card { max-width: 600px; }

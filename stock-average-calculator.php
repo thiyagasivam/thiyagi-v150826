@@ -1,6 +1,8 @@
-<?php include 'header.php';?>
-
 <?php
+$pageTitle = 'Stock Average Calculator 2026 | Calculate Your Average Stock Price';
+$pageDescription = 'Calculate your average stock purchase price instantly with our free stock average calculator. Track multiple buy orders and get your cost basis.';
+$pageKeywords = 'stock average calculator, average stock price calculator, cost basis calculator, stock trading, investment calculator';
+
 // Stock Average Calculator Logic
 function calculateAverage($transactions) {
     $totalShares = 0;
@@ -43,9 +45,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $results = calculateAverage($transactions);
     }
 }
+
+include 'header.php';
 ?>
-    <title>Stock Average Calculator</title>
-    <meta name="description" content="Calculate your average stock purchase price with our free stock average calculator.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         :root {

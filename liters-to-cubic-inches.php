@@ -1,25 +1,8 @@
 <?php
-ob_start();
+$pageTitle = 'Liters to Cubic Inches Converter 2026 | Volume Conversion Tool | Free Calculator';
+$pageDescription = 'Convert liters to cubic inches instantly with our 2026 accurate volume converter. Perfect for engineering, automotive, and scientific calculations.';
+$pageKeywords = 'liters to cubic inches converter 2026, volume conversion calculator, liters cubic inches converter, engineering calculator, automotive volume';
 include 'header.php';
-$header_content = ob_get_clean();
-
-// Insert title and meta tags into the head section
-$title = 'Liters to Cubic Inches Converter 2026 | Volume Conversion Tool | Free Calculator';
-$description = 'Convert liters to cubic inches instantly with our 2026 accurate volume converter. Perfect for engineering, automotive, and scientific calculations.';
-$keywords = 'liters to cubic inches converter 2026, volume conversion calculator, liters cubic inches converter, engineering calculator, automotive volume';
-$canonical = 'https://www.thiyagi.com/liters-to-cubic-inches';
-
-$meta_tags = '<title>' . htmlspecialchars($title) . '</title>' . "\n";
-$meta_tags .= '<meta name="description" content="' . htmlspecialchars($description) . '">' . "\n";
-$meta_tags .= '<meta name="keywords" content="' . htmlspecialchars($keywords) . '">' . "\n";
-
-// Replace the canonical URL and add our meta tags
-$header_content = str_replace(
-    $meta_tags,
-    $header_content
-);
-
-echo $header_content;
 ?>
 
 <div class="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 py-12 px-4 sm:px-6 lg:px-8">
