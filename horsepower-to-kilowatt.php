@@ -1,0 +1,380 @@
+<?php include 'header.php';?>
+<title>Horsepower to Kilowatt Converter 2026 | Convert HP to kW | Free Tool</title>
+<meta name="description" content="Convert horsepower to kilowatt instantly with our 2026 accurate power converter. Perfect HP to kW conversion with real-time calculations for mechanical power needs.">
+<meta name="keywords" content="horsepower to kilowatt 2026, power converter, mechanical conversion 2026, HP to kW calculator, power tool">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Horsepower to Kilowatt Converter 2026 | Convert HP to kW | Free Tool">
+<meta property="og:description" content="Convert horsepower to kilowatt instantly with our 2026 accurate power converter. Perfect HP to kW conversion with real-time calculations for mechanical power needs.">
+<meta property="og:url" content="https://www.thiyagi.com/horsepower-to-kilowatt">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.thiyagi.com/nt.png">
+<meta property="og:site_name" content="Thiyagi Tools">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Horsepower to Kilowatt Converter 2026 | Convert HP to kW | Free Tool">
+<meta name="twitter:description" content="Convert horsepower to kilowatt instantly with our 2026 accurate power converter. Perfect HP to kW conversion with real-time calculations for mechanical power needs.">
+<meta name="twitter:image" content="https://www.thiyagi.com/nt.png">
+
+<!-- Additional SEO Meta Tags -->
+<meta name="author" content="Thiyagi">
+<meta name="theme-color" content="#059669">
+
+<style>
+  .input-focus:focus {
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+    border-color: #059669;
+  }
+</style>
+
+<main class="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-emerald-100">
+  <!-- Hero Section -->
+  <section class="pt-20 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Horsepower to Kilowatt Converter
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Convert horsepower to kilowatts instantly with our accurate 2026 mechanical power calculator. 
+          Perfect for automotive, industrial, and engineering power conversions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+<!-- Converter Section -->
+<section class="bg-gradient-to-br from-emerald-50 via-green-50 to-emerald-100 py-12">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+        <div class="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-4">
+            <i class="fas fa-cog text-emerald-600 text-2xl" aria-hidden="true"></i>
+        </div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-2">
+            Quick Horsepower to Kilowatt Conversion
+        </h2>
+        <p class="text-gray-600 mb-8">
+            Enter horsepower and get instant results in kilowatts
+        </p>
+        
+        <!-- Related Converters -->
+        <div class="flex flex-wrap justify-center gap-4 text-sm" role="list">
+            <a href="/kilowatt-to-horsepower" class="px-4 py-2 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-emerald-600 hover:text-emerald-700" role="listitem">Kilowatt to Horsepower</a>
+            <a href="/watt-to-horsepower" class="px-4 py-2 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-emerald-600 hover:text-emerald-700" role="listitem">Watt to Horsepower</a>
+            <a href="/horsepower-to-watt" class="px-4 py-2 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-emerald-600 hover:text-emerald-700" role="listitem">Horsepower to Watt</a>
+            <a href="/watt-to-kilowatt" class="px-4 py-2 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-emerald-600 hover:text-emerald-700" role="listitem">Watt to Kilowatt</a>
+        </div>
+    </div>
+</section>
+
+<!-- Calculator Widget -->
+<section class="py-12">
+  <div class="max-w-xl mx-auto bg-white rounded-xl shadow-lg p-6 sm:p-10">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center">
+        <i class="fas fa-cog text-emerald-600 text-xl" aria-hidden="true"></i>
+      </div>
+      <div>
+        <h2 class="text-xl font-bold text-gray-800">Horsepower to Kilowatt Calculator</h2>
+        <p class="text-gray-600 text-sm">Enter value and get instant conversion</p>
+      </div>
+    </div>
+    
+    <form class="space-y-6" role="form">
+      <div class="flex flex-col sm:flex-row gap-3">
+        <div class="relative flex-1">
+          <label for="horsepowerValue" class="block text-sm font-medium text-gray-700 mb-2">
+            Horsepower
+          </label>
+          <div class="relative">
+            <input
+              type="number"
+              id="horsepowerValue"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 input-focus text-lg"
+              placeholder="Enter horsepower"
+              step="any"
+              min="0"
+            />
+            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+              <span class="text-gray-500 text-sm">HP</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex items-center justify-center sm:mt-8">
+          <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
+            <i class="fas fa-arrow-right text-emerald-600" aria-hidden="true"></i>
+          </div>
+        </div>
+        
+        <div class="relative flex-1">
+          <label for="kilowattResult" class="block text-sm font-medium text-gray-700 mb-2">
+            Kilowatts
+          </label>
+          <div class="relative">
+            <input
+              type="text"
+              id="kilowattResult"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 text-lg font-medium text-emerald-700"
+              placeholder="Result will appear here"
+              readonly
+            />
+            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+              <span class="text-gray-500 text-sm">kW</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Copy Button -->
+      <div class="flex justify-center">
+        <button
+          type="button"
+          id="copyBtn"
+          class="hidden px-6 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 transition-colors duration-200 flex items-center gap-2"
+        >
+          <i class="fas fa-copy" aria-hidden="true"></i>
+          Copy Result
+        </button>
+      </div>
+      
+      <!-- Copy Success Message -->
+      <div id="copySuccess" class="hidden text-center">
+        <div class="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-lg">
+          <i class="fas fa-check-circle mr-2" aria-hidden="true"></i>
+          <span>Copied to clipboard!</span>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+  <!-- About Section -->
+  <section class="max-w-4xl mx-auto mt-12 px-4">
+    <article class="bg-white rounded-xl shadow-lg p-8">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+        <i class="fas fa-info-circle text-emerald-600" aria-hidden="true"></i>
+        Horsepower to Kilowatt Conversion 2026
+      </h2>
+      <div class="prose max-w-none text-gray-600">
+        <p class="mb-4">
+          Converting horsepower to kilowatts is essential for automotive, industrial, and mechanical engineering applications in 2026. 
+          This conversion between imperial and metric power units enables accurate communication between professionals 
+          working in automotive design, industrial machinery, and mechanical systems, from engine specifications to motor ratings.
+        </p>
+        <p class="mb-6">
+          Our 2026 converter provides instant and precise conversions from horsepower to kilowatts, essential for mechanical engineers, 
+          automotive professionals, industrial designers, and anyone working with mechanical power measurements. 
+          1 horsepower equals approximately 0.746 kilowatts in the mechanical system.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <!-- How to Convert Section -->
+  <section class="max-w-4xl mx-auto mt-8 px-4">
+    <article class="bg-white rounded-xl shadow-lg p-8">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+        <i class="fas fa-graduation-cap text-emerald-600" aria-hidden="true"></i>
+        How to Convert Horsepower to Kilowatts
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-4">Conversion Steps</h3>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-emerald-600 font-bold text-sm">1</span>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-800">Take your horsepower value</h4>
+                <p class="text-gray-600 text-sm">Example: 10 horsepower</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-emerald-600 font-bold text-sm">2</span>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-800">Multiply by 0.746</h4>
+                <p class="text-gray-600 text-sm">10 × 0.746 = 7.46</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-emerald-600 font-bold text-sm">3</span>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-800">Get your result</h4>
+                <p class="text-gray-600 text-sm">Result: 7.46 kilowatts</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-4">Understanding Mechanical Power Units</h3>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-green-600 font-bold text-sm">1</span>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-800">1 HP = 0.746 kW</h4>
+                <p class="text-gray-600 text-sm">Mechanical horsepower</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-green-600 font-bold text-sm">2</span>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-800">Horsepower</h4>
+                <p class="text-gray-600 text-sm">Imperial unit of mechanical power</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-green-600 font-bold text-sm">3</span>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-800">Kilowatt</h4>
+                <p class="text-gray-600 text-sm">1,000 watts in SI units</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- Conversion Table -->
+  <section class="max-w-4xl mx-auto mt-8 px-4">
+    <article class="bg-white rounded-xl shadow-lg p-8">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+        <i class="fas fa-table text-green-600" aria-hidden="true"></i>
+        Common Horsepower to Kilowatt Conversions
+      </h2>
+      
+      <div class="overflow-x-auto">
+        <table class="w-full border border-gray-300">
+          <thead>
+            <tr class="bg-gray-50">
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-700">Horsepower</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-700">Kilowatts</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-700">Common Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3">0.5 HP</td>
+              <td class="border border-gray-300 px-4 py-3 font-medium text-emerald-700">0.37 kW</td>
+              <td class="border border-gray-300 px-4 py-3 text-gray-600">Small motor</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3">1 HP</td>
+              <td class="border border-gray-300 px-4 py-3 font-medium text-emerald-700">0.75 kW</td>
+              <td class="border border-gray-300 px-4 py-3 text-gray-600">Standard horsepower</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3">5 HP</td>
+              <td class="border border-gray-300 px-4 py-3 font-medium text-emerald-700">3.73 kW</td>
+              <td class="border border-gray-300 px-4 py-3 text-gray-600">Power tool</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3">10 HP</td>
+              <td class="border border-gray-300 px-4 py-3 font-medium text-emerald-700">7.46 kW</td>
+              <td class="border border-gray-300 px-4 py-3 text-gray-600">Industrial motor</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3">50 HP</td>
+              <td class="border border-gray-300 px-4 py-3 font-medium text-emerald-700">37.3 kW</td>
+              <td class="border border-gray-300 px-4 py-3 text-gray-600">Small engine</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3">200 HP</td>
+              <td class="border border-gray-300 px-4 py-3 font-medium text-emerald-700">149.2 kW</td>
+              <td class="border border-gray-300 px-4 py-3 text-gray-600">Car engine</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- Quick Tips -->
+      <div class="mt-6 bg-emerald-50 rounded-lg p-4">
+        <h3 class="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+          <i class="fas fa-lightbulb text-emerald-600" aria-hidden="true"></i>
+          Quick Conversion Tips for Mechanical Power
+        </h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-600 text-sm">
+          <li>1 horsepower = 0.746 kilowatts (mechanical horsepower)</li>
+          <li>Quick calculation: horsepower × 0.746 for exact kilowatts</li>
+          <li>Essential for automotive and industrial applications</li>
+          <li>Kilowatt is the preferred metric unit for electrical power</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+</main>
+
+<script>
+function updateConversion() {
+  const horsepowerValue = parseFloat(document.getElementById('horsepowerValue').value);
+  const kilowattResult = document.getElementById('kilowattResult');
+  const copyBtn = document.getElementById('copyBtn');
+  
+  if (isNaN(horsepowerValue) || horsepowerValue < 0) {
+    kilowattResult.value = '';
+    copyBtn.classList.add('hidden');
+    return;
+  }
+  
+  // Convert horsepower to kilowatts
+  // 1 horsepower = 0.746 kilowatts (mechanical horsepower)
+  const kilowattValue = horsepowerValue * 0.746;
+  
+  // Format the result with appropriate decimal places
+  let formattedResult;
+  if (kilowattValue >= 1000) {
+    formattedResult = kilowattValue.toLocaleString('en-US', {maximumFractionDigits: 2});
+  } else if (kilowattValue >= 100) {
+    formattedResult = kilowattValue.toFixed(2);
+  } else if (kilowattValue >= 10) {
+    formattedResult = kilowattValue.toFixed(3);
+  } else if (kilowattValue >= 1) {
+    formattedResult = kilowattValue.toFixed(4);
+  } else {
+    formattedResult = kilowattValue.toFixed(5);
+  }
+  
+  kilowattResult.value = formattedResult;
+  copyBtn.classList.remove('hidden');
+}
+
+function copyResult() {
+  const horsepowerValue = document.getElementById('horsepowerValue').value;
+  const kilowattResult = document.getElementById('kilowattResult').value;
+  const copyText = `${horsepowerValue} horsepower = ${kilowattResult} kilowatts`;
+  
+  navigator.clipboard.writeText(copyText).then(() => {
+    const copySuccess = document.getElementById('copySuccess');
+    copySuccess.classList.remove('hidden');
+    setTimeout(() => {
+      copySuccess.classList.add('hidden');
+    }, 3000);
+  });
+}
+
+document.getElementById('horsepowerValue').addEventListener('input', updateConversion);
+document.getElementById('copyBtn').addEventListener('click', copyResult);
+
+// Autofocus and demo value
+window.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('horsepowerValue').focus();
+  document.getElementById('horsepowerValue').value = 1;
+  updateConversion();
+});
+</script>
+
+<?php include 'footer.php';?>

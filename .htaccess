@@ -1,0 +1,241 @@
+RewriteEngine On
+
+# Force www and HTTPS (handle both non-www and non-https)
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^thiyagi\.com$ [NC]
+RewriteRule ^(.*)$ https://www.thiyagi.com/$1 [L,R=301]
+
+# Permanent redirect /home to root
+RewriteRule ^home/?$ https://www.thiyagi.com/ [L,R=301]
+
+# Permanent redirect /index to root to avoid duplicate homepage URL
+RewriteRule ^index/?$ https://www.thiyagi.com/ [L,R=301]
+
+# Set custom 404 error page
+ErrorDocument 404 /404.php
+
+# Sitemap rules
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+RewriteRule ^sitemap/?$ sitemap.php [L]
+RewriteRule ^service-center-sitemap\.xml$ service-center-sitemap.php [L]
+
+# Permanent redirect for renamed holiday files
+RewriteRule ^albania-holidays-2025\.php$ /albania-holidays-2026.php [L,R=301]
+
+# Prevent access to .htaccess and other sensitive files
+<Files ".htaccess">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Block access to generated-pages directory (returns 410 Gone for removed content)
+RewriteRule ^generated-pages/ - [L,R=410]
+
+# Block non-existent pages and old URLs (returns 410 Gone for removed content)
+# Time conversion pages with numbers
+RewriteRule ^(weeks-to-days|months-to-weeks|days-to-weeks|weeks-to-months)/[0-9]+$ - [L,R=410]
+
+# Volume/weight conversion pages with numbers  
+RewriteRule ^(ounces-to-liters|gallons-to-liters|liters-to-gallons|liters-to-ounces|gallons-to-ounces|kg-to-lbs)/[0-9,]+$ - [L,R=410]
+
+# Length conversion pages with numbers (includes numbers with commas)
+RewriteRule ^(cm-to-feet-inches|feet-inches-to-cm|inches-to-feet|feet-to-inches|kph-to-mph)/[0-9,]+$ - [L,R=410]
+
+# Non-existent conversion pages
+RewriteRule ^(weeks-to-months|cups-to-ounces|ounces-to-cups|mps-to-mph|ounce-to-cup|cup-to-ounce|pint-to-cup|cooking-converter|speed-converter|ounces-to-tablespoons|cup-to-gallon|pint-to-quart|fluid-ounce-us-to-ml|volume-converters|tablespoons-to-teaspoons|teaspoons-to-ml|ppm-to-mg-l|mph-to-kmh|knot-to-kmh)$ - [L,R=410]
+
+# Non-existent area/unit conversion pages
+RewriteRule ^(cent-to-bigha|cent-to-hectare|square-mile-to-hectare|marla-to-kanal|square-meter-to-marla)$ - [L,R=410]
+
+# Non-existent physics/chemistry conversion pages
+RewriteRule ^(atmosphere-to-pascal|atm-to-psi|atm-to-bar|mmhg-to-bar|newtons-to-pounds|kg-to-grams|kg-to-pounds|pounds-to-kg|horsepower-to-watts|watts-to-horsepower|kw-to-watts|joule-to-btu|joule-to-cal|btu-to-cal|watt-to-btu-per-hour|gb-to-tb|tb-to-gb|nanograms-to-micrograms|micrograms-to-grams|mole-to-gram|radian-to-degree|kilometer-per-hour-to-meter-per-second)$ - [L,R=410]
+
+# Non-existent calculator/tool pages
+RewriteRule ^(youtube-views-ratio-calculator|seo-analyzer|image-compressor|flip-image|rotate-image|cubic-meter-to-cubic-yard|cubic-yard-to-cubic-meter)$ - [L,R=410]
+
+# Non-existent two-wheeler loan calculator paths
+RewriteRule ^calculators/two-wheeler-loan/.+$ - [L,R=410]
+
+# Non-existent NBFC calculator paths
+RewriteRule ^calculators/(cashbean|payme|prefr|rupifi|money-club|nira|fairmoney|credflow|capfloat|finzy|moneyview|zest-money|creditbee|ring)-(personal|home)-loan-emi-calculator$ - [L,R=410]
+RewriteRule ^calculators/nbfc/[^/]+/?$ - [L,R=410]
+
+# Shop pages (entire shop section is non-existent)
+RewriteRule ^shop/ - [L,R=410]
+RewriteRule ^product/ - [L,R=410]
+
+# Non-existent holiday pages
+RewriteRule ^holiday/(france|northern-ireland|isle-of-man|guernsey)-holidays\.php$ - [L,R=410]
+RewriteRule ^holiday/(nova-scotia|quebec|saskatchewan|british-columbia)-holidays\.php$ - [L,R=410]
+RewriteRule ^holiday/(new-south-wales)-holidays\.php$ - [L,R=410]
+RewriteRule ^holiday/(usa-holiday|australia-holidays|uk-holiday/england-cities|indian-holiday)/(index|sip-calculator|emi-calculator|lumpsum-calculator|fd-calculator|rd-calculator|ppf-calculator|sukanya-samriddhi-yojana-calculator|loan-calculator|html-minifier|html-beautifier|css-minifier|css-beautifier|javascript-beautifier|javascript-minifier|json-viewer|privacy|about|step-up-sip-calculator|fix-state-pages)$ - [L,R=410]
+
+# Service center/electricity board tool pages
+RewriteRule ^(service-center|electricity-board|rto-details)/(index|contact|privacy|sip-calculator|emi-calculator|fd-calculator|rd-calculator|ppf-calculator|sukanya-samriddhi-yojana-calculator|html-minifier|html-beautifier|css-minifier|javascript-beautifier|breadcrumb-schema)$ - [L,R=410]
+
+# Non-existent service center specific pages
+RewriteRule ^service-center/xiaomi/aurangabad-authorized-service-center-1$ - [L,R=410]
+RewriteRule ^apple-authorized-service-center-near-me$ - [L,R=410]
+
+# Test and development pages
+RewriteRule ^(newhome|n-home|new-service-center|temp_link_analysis|verify-links|final-link-cleanup|opage_sharing|index\.html|wp-login|home/home)/ - [L,R=410]
+RewriteRule ^(newhome|n-home|new-service-center|temp_link_analysis|verify-links|final-link-analysis|opage_sharing|wp-login)$ - [L,R=410]
+
+# Calendar pages
+RewriteRule ^calendar/2025/[a-z]+-festivals$ - [L,R=410]
+RewriteRule ^past/index$ - [L,R=410]
+
+# Pincode pages
+RewriteRule ^pincode/(quick-fix|api_test|ladakh|state-districts|pincode-detail)$ - [L,R=410]
+
+# Blog WordPress paths (entire blog section)
+RewriteRule ^blog/ - [L,R=410]
+RewriteRule ^disclaimer/ - [L,R=410]
+RewriteRule ^about-us-2/ - [L,R=410]
+RewriteRule ^faq/ - [L,R=410]
+
+# Gallery and shows
+RewriteRule ^gallery/connections/$ - [L,R=410]
+RewriteRule ^shows/hisaab-barabar/$ - [L,R=410]
+RewriteRule ^elements/text-sliders/$ - [L,R=410]
+
+# WordPress and RSS feeds
+RewriteRule ^(rss\.xml|wp-content|wp-includes|wp-admin|xmlrpc)/ - [L,R=410]
+
+# Apple app association files
+RewriteRule ^(\.well-known/)?apple-app-site-association$ - [L,R=410]
+
+# Old image paths
+RewriteRule ^images/(tneb-calculator-preview|calculator-screenshot|emi-calculator-twitter|emi-calculator-og|wifi-password-generator|logo)\.jpg$ - [L,R=410]
+RewriteRule ^images/logo\.png$ - [L,R=410]
+RewriteRule ^wp-content/uploads/.*\.png$ - [L,R=410]
+
+# Miscellaneous non-existent pages
+RewriteRule ^[0-9]+\.htm$ - [L,R=410]
+
+# Remove .php from URL (redirect to clean URL) - but skip directory-based URLs
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/([^.?\s]+)\.php [NC]
+RewriteCond %1 !^(rto-details|electricity-board|service-center|holiday)/ [NC]
+RewriteRule ^ /%1? [R=301,L]
+
+# Directory-based URL rules (highest priority)
+# Calculator
+RewriteRule ^calculator/?$ /calculator/index.html [L]
+RewriteRule ^calculator/banks/?$ /calculator/banks/index.php [L]
+
+# Calculators (new directory)
+RewriteRule ^calculators/?$ /calculators/index.php [L]
+
+# Holiday
+RewriteRule ^calculators/(standard-chartered-bank-foreign|citibank-foreign|hsbc-bank-foreign|dbs-bank-foreign|deutsche-bank|bnp-paribas|bank-of-america|jp-morgan-chase|anz-bank|barclays-bank|ab-bank-limited|american-express-banking|bank-of-bahrain-kuwait|bank-of-ceylon|bank-of-china-limited|bank-of-nova-scotia|bank-of-tokyo-mitsubishi|bny-mellon|commonwealth-bank-australia|credit-agricole|credit-suisse|ctbc-bank|erste-bank|industrial-commercial-bank-china|industrial-bank-korea|ing-vysya-bank|jpmorgan-chase-bank|keb-hana-bank|krung-thai-bank|mashreq-bank|mizuho-bank|ncc-bank-limited|oman-international-bank|pt-bank-maybank|rabobank-international|royal-bank-scotland|sber-bank|shinhan-bank|societe-generale|sonali-bank-limited|sumitomo-mitsui-banking|ubs-ag|united-overseas-bank|westpac-banking)-car-loan-emi-calculator/?$ /calculators/bank-car-loan-calculator.php?bank=$1 [L,QSA]
+
+# Fintech Companies - Car Loan (All fintech companies offering car loans)
+RewriteRule ^calculators/(payme-india|kreditbee|moneytap|cashe|earlysalary|flexsalary|kissht|lendingkart|capital-float|navi-loans|cred-loans|dhani-loans|lazypay-loans|slice-fintech|rupeek-loans|faircent-loans|upwards-fintech|zest-money|zestmoney|true-balance|branch-fintech|loantap|incred|money-view|moneyview|paysense|mobikwik-lending|ziploan|flexiloans|neogrowth|ugro-capital|tala-india|lenddo-efl|fibe-money|jupiter-money|fi-money|uni-fintech|simpl-fintech|okcredit|groww-credit|zomato-pay-later|amazon-pay-later|flipkart-pay-later|payu-credit|razorpay-capital|smartcoin|creditbee|nira|cashbean|prefr|fairmoney|payme|upwards|oxyzo|credflow|rupifi|capfloat|finzy|money-club|ring|lazypay)-car-loan-emi-calculator/?$ /calculators/bank-car-loan-calculator.php?bank=$1 [L,QSA]
+
+# Cooperative Banks - Car Loan  
+RewriteRule ^calculators/(saraswat-cooperative-bank|nkgsb-cooperative-bank|cosmos-cooperative-bank|abhyudaya-cooperative-bank)-car-loan-emi-calculator/?$ /calculators/bank-car-loan-calculator.php?bank=$1 [L,QSA]
+
+# General calculator pages
+RewriteRule ^calculators/([a-zA-Z-]+)/?$ /calculators/$1.php [L]
+
+# RTO Details
+RewriteRule ^rto-details/?$ /rto-details/index.php [L]
+
+# Electricity Board  
+RewriteRule ^electricity-board/?$ /electricity-board/index.php [L]
+
+# Service Center
+RewriteRule ^service-center/?$ /service-center/index.php [L]
+
+# Pincode URL Structure
+# All states and UTs page
+RewriteRule ^pincode/all-states/?$ /pincode/all-states.php [L]
+
+# Dynamic pincode pages - state/district/area-pincode-number
+RewriteRule ^pincode/([a-z-]+)/([a-z-]+)/([a-z0-9-]+)-pincode-([0-9]{6})/?$ /pincode/dynamic.php?state=$1&district=$2&area=$3&pincode=$4 [L,QSA]
+
+# Pincode search by number
+RewriteRule ^pincode/search/([0-9]{6})/?$ /pincode/index.php?search=$1 [L,QSA]
+
+# Pincode state pages
+RewriteRule ^pincode/([a-z-]+)/?$ /pincode/state.php?state=$1 [L,QSA]
+
+# Pincode district pages  
+RewriteRule ^pincode/([a-z-]+)/([a-z-]+)/?$ /pincode/district.php?state=$1&district=$2 [L,QSA]
+
+# Main pincode index
+RewriteRule ^pincode/?$ /pincode/index.php [L]
+
+# Holiday URL Structure
+# Main holiday index
+RewriteRule ^holiday/?$ /holiday/index.php [L]
+
+# UK Holiday URLs
+RewriteRule ^holiday/uk-holiday/?$ /holiday/uk-holiday/index.php [L]
+RewriteRule ^holiday/uk-holiday/england-holidays/?$ /holiday/uk-holiday/england-holidays.php [L]
+RewriteRule ^holiday/uk-holiday/wales-holidays/?$ /holiday/uk-holiday/wales-holidays.php [L]
+RewriteRule ^holiday/uk-holiday/scotland-holidays/?$ /holiday/uk-holiday/scotland-holidays.php [L]
+RewriteRule ^holiday/uk-holiday/northern-ireland-holidays/?$ /holiday/uk-holiday/northern-ireland-holidays.php [L]
+RewriteRule ^holiday/uk-holiday/jersey-holidays/?$ /holiday/uk-holiday/jersey-holidays.php [L]
+RewriteRule ^holiday/uk-holiday/guernsey-holidays/?$ /holiday/uk-holiday/guernsey-holidays.php [L]
+RewriteRule ^holiday/uk-holiday/isle-of-man-holidays/?$ /holiday/uk-holiday/isle-of-man-holidays.php [L]
+
+# England Cities (specific rule for england-cities directory)
+RewriteRule ^holiday/uk-holiday/england-cities/?$ /holiday/uk-holiday/england-cities/index.php [L]
+RewriteRule ^holiday/uk-holiday/england-cities/([a-zA-Z-]+)-holidays/?$ /holiday/uk-holiday/england-cities/$1-holidays.php [L]
+
+# USA Holiday URLs
+RewriteRule ^holiday/usa-holiday/?$ /holiday/usa-holiday/index.php [L]
+RewriteRule ^holiday/usa-holiday/([a-zA-Z-]+)-holidays/?$ /holiday/usa-holiday/$1-holidays.php [L]
+
+# Canada Holiday URLs
+RewriteRule ^holiday/canada-holidays/?$ /holiday/canada-holidays/index.php [L]
+RewriteRule ^holiday/canada-holidays/([a-zA-Z-]+)-holidays/?$ /holiday/canada-holidays/$1-holidays.php [L]
+
+# Australia Holiday URLs
+RewriteRule ^holiday/australia-holidays/?$ /holiday/australia-holidays/index.php [L]
+RewriteRule ^holiday/australia-holidays/([a-zA-Z-]+)-holidays/?$ /holiday/australia-holidays/$1-holidays.php [L]
+
+# Indian Holiday URLs
+RewriteRule ^holiday/indian-holiday/?$ /holiday/indian-holiday/index.php [L]
+RewriteRule ^holiday/indian-holiday/([a-zA-Z-]+)-holidays/?$ /holiday/indian-holiday/$1-holidays.php [L]
+
+# Special pages (clean URLs)
+RewriteRule ^contact/?$ /contact.php [L]
+RewriteRule ^privacy/?$ /privacy.php [L]
+
+# General clean URL handling for root level PHP files (lowest priority)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options DENY
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Enable GZIP Compression for better performance
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml
+</IfModule>
+
+# Browser Caching for static assets
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+</IfModule>
+
+

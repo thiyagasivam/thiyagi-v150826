@@ -1,0 +1,214 @@
+/* Unique Navbar Class */
+.custom-navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Custom Logo Styling */
+.custom-logo {
+  height: 36px;
+  width: auto;
+}
+
+/* Custom Sign In Button */
+.custom-signin-btn {
+  border-width: 1px;
+  font-weight: 500;
+  padding: 5px 15px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .custom-signin-btn {
+    margin-top: 10px;
+  }
+}
+
+
+
+.custom-loan-accordion .accordion-button {
+  font-weight: 600;
+  background-color: #f8f9fa;
+}
+
+.custom-loan-accordion .accordion-button:not(.collapsed) {
+  background-color: #e2e6ea;
+  color: #000;
+}
+
+.custom-loan-accordion a {
+  color: #1a1a1a;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.custom-loan-accordion a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  .custom-loan-accordion .col-sm-6 {
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+/* Footer Styles */
+.footer {
+  margin-top: 20px !important;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 40px 0 0;
+  margin-top: auto;
+}
+.footer h5 {
+  color: #f8f9fa;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.footer-links {
+  padding-left: 0;
+}
+.footer-links li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+.footer-links a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-links a:hover {
+  color: #3498db;
+}
+.social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #34495e;
+  color: #ecf0f1;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+.social-icons a:hover {
+  background-color: #3498db;
+  transform: translateY(-3px);
+}
+.copyright {
+  border-top: 1px solid #34495e;
+  padding-top: 20px;
+  margin-top: 30px;
+  color: #bdc3c7;
+}
+.footer-logo {
+  max-height: 50px;
+  margin-bottom: 15px;
+}
+.footer-about {
+  margin-bottom: 20px;
+  color: #bdc3c7;
+}
+
+
+/* Social share buttons */
+
+/*.social-share {*/
+/*  margin: 30px 0;*/
+/*}*/
+/*.social-share-icons {*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  gap: 10px;*/
+/*  padding-left: 200px;*/
+/*}*/
+/*.social-share-icons a {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  width: 50px;*/
+/*  height: 50px;*/
+/*  border-radius: 10px;*/
+/*  color: white;*/
+/*  font-size: 24px;*/
+/*  text-decoration: none;*/
+/*}*/
+/*.facebook { background: #3b5998; }*/
+/*.twitter { background: #1da1f2; }*/
+/*.pinterest { background: #bd081c; }*/
+/*.linkedin { background: #0077b5; }*/
+/*.reddit { background: #ff4500; }*/
+/*.tumblr { background: #35465d; }*/
+/*.instagram { background: #e4405f; }*/
+/*.youtube { background: #cd201f; }*/
+/*.whatsapp { background: #25d366; }*/
+
+
+    /* Custom Social Share Wrapper */
+    .custom-social-share {
+      margin: 30px 0;
+    }
+
+    .custom-social-share-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .custom-social-share-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .custom-social-share-icons a:hover {
+      transform: scale(1.1);
+    }
+
+    .facebook { background: #3b5998; }
+    .twitter { background: #1da1f2; }
+    .pinterest { background: #bd081c; }
+    .linkedin { background: #0077b5; }
+    .reddit { background: #ff4500; }
+    .tumblr { background: #35465d; }
+    .instagram { background: #e4405f; }
+    .youtube { background: #cd201f; }
+    .whatsapp { background: #25d366; }
+
+    /* Responsive layout (for small devices) */
+    @media (max-width: 768px) {
+      .custom-social-share-icons {
+        justify-content: center;
+        padding-left: 0;
+      }
+    }
+
+/* Dark mode styles */
+.dark-mode {
+  background: #121212;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .footer-col {
+    margin-bottom: 30px;
+  }
+  .navbar-collapse {
+    padding-top: 15px;
+  }
+}
+

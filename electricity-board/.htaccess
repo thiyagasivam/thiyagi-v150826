@@ -1,0 +1,42 @@
+RewriteEngine On
+
+# Remove .php extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^.]+)$ $1.php [L]
+
+# Redirect .php URLs to clean URLs
+RewriteCond %{THE_REQUEST} /([^.]+)\.php[\s?] [NC]
+RewriteRule ^ /%1? [R=301,L]
+
+# Specific rules for electricity calculators
+RewriteRule ^wbsedcl-bill-calculator$ wbsedcl-bill-calculator.php [L]
+RewriteRule ^uppcl-bill-calculator$ uppcl-bill-calculator.php [L]
+RewriteRule ^bihar-electricity-bill-calculator$ bihar-electricity-bill-calculator.php [L]
+RewriteRule ^goa-electricity-bill-calculator$ goa-electricity-bill-calculator.php [L]
+RewriteRule ^delhi-electricity-bill-calculator$ delhi-electricity-bill-calculator.php [L]
+RewriteRule ^hpsebl-electricity-bill-calculator$ hpsebl-electricity-bill-calculator.php [L]
+RewriteRule ^kseb-bill-calculator$ kseb-bill-calculator.php [L]
+RewriteRule ^karnataka-electricity-bill-calculator$ karnataka-electricity-bill-calculator.php [L]
+RewriteRule ^haryana-electricity-bill-calculator$ haryana-electricity-bill-calculator.php [L]
+RewriteRule ^nagaland-electricity-bill-calculator$ nagaland-electricity-bill-calculator.php [L]
+RewriteRule ^jbvnl-electricity-bill-calculator$ jbvnl-electricity-bill-calculator.php [L]
+RewriteRule ^upcl-electricity-bill-calculator-uttarakhand$ upcl-electricity-bill-calculator-uttarakhand.php [L]
+RewriteRule ^apdcl-electricity-bill-calculator$ apdcl-electricity-bill-calculator.php [L]
+RewriteRule ^andaman-electricity-bill-calculator$ andaman-electricity-bill-calculator.php [L]
+RewriteRule ^ladakh-electricity-bill-calculator$ ladakh-electricity-bill-calculator.php [L]
+RewriteRule ^tsecl-electricity-bill-calculator$ tsecl-electricity-bill-calculator.php [L]
+RewriteRule ^tsspdcl-electricity-bill-calculator$ tsspdcl-electricity-bill-calculator.php [L]
+RewriteRule ^tneb-electricity-bill-calculator$ tneb-electricity-bill-calculator.php [L]
+RewriteRule ^manipur-electricity-bill-calculator$ manipur-electricity-bill-calculator.php [L]
+RewriteRule ^cspdcl-electricity-bill-calculator$ cspdcl-electricity-bill-calculator.php [L]
+RewriteRule ^mp-electricity-bill-calculator$ mp-electricity-bill-calculator.php [L]
+RewriteRule ^pspcl-bill-calculator$ pspcl-bill-calculator.php [L]
+RewriteRule ^sikkim-electricity-bill-calculator$ sikkim-electricity-bill-calculator.php [L]
+RewriteRule ^odisha-electricity-bill-calculator$ odisha-electricity-bill-calculator.php [L]
+RewriteRule ^rajasthan-electricity-bill-calculator$ rajasthan-electricity-bill-calculator.php [L]
+RewriteRule ^gujarat-electricity-bill-calculator$ gujarat-electricity-bill-calculator.php [L]
+RewriteRule ^meghalaya-electricity-bill-calculator$ meghalaya-electricity-bill-calculator.php [L]
+RewriteRule ^apspdcl-electricity-bill-calculator$ apspdcl-electricity-bill-calculator.php [L]
+RewriteRule ^jpdcl-electricity-bill-calculator-kashmir$ jpdcl-electricity-bill-calculator-kashmir.php [L]
+RewriteRule ^mizoram-electricity-bill-calculator$ mizoram-electricity-bill-calculator.php [L]

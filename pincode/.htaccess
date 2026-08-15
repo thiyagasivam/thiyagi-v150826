@@ -1,0 +1,170 @@
+# Pincode Directory .htaccess Configuration
+# Comprehensive URL routing and optimization for Indian pincode system
+
+RewriteEngine On
+
+# ====== SECURITY HEADERS ======
+<IfModule mod_headers.c>
+    # Security headers for pincode pages
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options SAMEORIGIN
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Cache control for static assets
+    <FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    
+    # API responses cache control
+    <FilesMatch "\.(php)$">
+        Header set Cache-Control "public, max-age=300"
+    </FilesMatch>
+</IfModule>
+
+# ====== FILE PROTECTION ======
+# Protect sensitive files
+<Files "api_config.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ".htaccess">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Prevent access to backup files
+<FilesMatch "\.(bak|backup|old|tmp|log)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# ====== PERFORMANCE OPTIMIZATION ======
+# Enable Gzip compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+</IfModule>
+
+# ====== URL ROUTING RULES ======
+
+# API endpoint routing
+RewriteRule ^api/search/pincode/([0-9]{6})/?$ api_test.php?action=test_api&pincode=$1 [L,QSA]
+RewriteRule ^api/search/area/([^/]+)/?$ search.php?action=search&q=$1 [L,QSA]
+
+# Enhanced search page
+RewriteRule ^search/?$ search.php [L,QSA]
+RewriteRule ^search/([^/]+)/?$ search.php?search_query=$1 [L,QSA]
+
+# API testing and development tools
+RewriteRule ^test/?$ api_test.php [L,QSA]
+RewriteRule ^test/([0-9]{6})/?$ api_test.php?pincode=$1 [L,QSA]
+
+# All states and union territories listing
+RewriteRule ^all-states/?$ all-states.php [L,QSA]
+RewriteRule ^states/?$ all-states.php [L,QSA]
+
+# Dynamic pincode pages - Priority routing for specific patterns
+# Pattern: state/district/area-pincode-123456
+RewriteRule ^([a-z-]+)/([a-z-]+)/([a-z0-9-]+)-pincode-([0-9]{6})/?$ dynamic.php?state=$1&district=$2&area=$3&pincode=$4 [L,QSA]
+
+# Pincode search by number only
+RewriteRule ^([0-9]{6})/?$ index.php?search=$1 [L,QSA]
+RewriteRule ^pincode/([0-9]{6})/?$ index.php?search=$1 [L,QSA]
+
+# State-level pages
+RewriteRule ^([a-z-]+)/?$ state.php?state=$1 [L,QSA]
+
+# District-level pages  
+RewriteRule ^([a-z-]+)/([a-z-]+)/?$ district.php?state=$1&district=$2 [L,QSA]
+
+# Root pincode index (handled by main .htaccess)
+RewriteRule ^/?$ index.php [L,QSA]
+
+# ====== ERROR HANDLING ======
+# Custom error pages for pincode section
+ErrorDocument 404 /pincode/index.php?error=404
+
+# ====== API CORS HEADERS ======
+<IfModule mod_headers.c>
+    # Allow CORS for API endpoints
+    <FilesMatch "\.(php)$">
+        Header set Access-Control-Allow-Origin "*"
+        Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+        Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+    </FilesMatch>
+</IfModule>
+
+# ====== MIME TYPES ======
+<IfModule mod_mime.c>
+    # Ensure proper MIME types for API responses
+    AddType application/json .json
+    AddType text/css .css
+    AddType application/javascript .js
+</IfModule>
+
+# ====== REDIRECTS FOR SEO ======
+# Redirect old patterns to new SEO-friendly URLs
+RewriteRule ^index\.php\?search=([0-9]{6})$ /$1? [R=301,L]
+RewriteRule ^state\.php\?state=([a-z-]+)$ /$1? [R=301,L]
+RewriteRule ^district\.php\?state=([a-z-]+)&district=([a-z-]+)$ /$1/$2? [R=301,L]
+
+# ====== CANONICAL URL ENFORCEMENT ======
+# Remove trailing slashes for consistency (optional)
+# RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# ====== DEVELOPMENT & DEBUGGING ======
+# Enable detailed error reporting (disable in production)
+# php_flag display_errors On
+# php_flag display_startup_errors On
+# php_value error_reporting "E_ALL & ~E_NOTICE"
+
+# ====== RATE LIMITING (if mod_evasive is available) ======
+<IfModule mod_evasive24.c>
+    DOSHashTableSize    2048
+    DOSPageCount        10
+    DOSPageInterval     1
+    DOSSiteCount        50
+    DOSSiteInterval     1
+    DOSBlockingPeriod   60
+</IfModule>
+
+# ====== ROBOTS.TXT OVERRIDE ======
+# Allow all search engines to crawl pincode pages
+<IfModule mod_headers.c>
+    <FilesMatch "robots\.txt$">
+        Header set Content-Type "text/plain"
+    </FilesMatch>
+</IfModule>
+
+# ====== SITEMAP ROUTING ======
+# Handle sitemap requests for pincode section
+RewriteRule ^sitemap\.xml$ /sitemap.php?section=pincode [L,QSA]
+RewriteRule ^sitemap-([a-z-]+)\.xml$ /sitemap.php?section=pincode&state=$1 [L,QSA]
+
+# ====== MOBILE OPTIMIZATION ======
+# Ensure proper handling for mobile devices
+<IfModule mod_headers.c>
+    # Add viewport meta for mobile optimization
+    Header always set Vary "User-Agent"
+</IfModule>
+
+# ====== ANALYTICS & TRACKING ======
+# Allow analytics scripts (if needed)
+<FilesMatch "^(analytics|tracking|gtag)\.js$">
+    Header set Cache-Control "public, max-age=86400"
+</FilesMatch>
+
+# ====== BACKUP COMPATIBILITY ======
+# Fallback for older URL patterns (temporary)
+RewriteRule ^legacy/([a-z-]+)/([a-z-]+)/([0-9]{6})/?$ dynamic.php?state=$1&district=$2&pincode=$3 [L,QSA]
+
+# ====== END OF CONFIGURATION ======

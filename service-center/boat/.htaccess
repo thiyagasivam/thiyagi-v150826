@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /service-center/boat/
+
+# Route slug to service-center.php
+RewriteRule ^([a-z0-9-]+)/?$ service-center.php?slug=$1 [L,QSA]

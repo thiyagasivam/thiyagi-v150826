@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /service-center/poco/
+
+# Allow direct access to new-delhi.php
+RewriteRule ^new-delhi/?$ new-delhi.php [L]
+
+# Route slug to service-center.php
+RewriteRule ^([a-z0-9-]+)/?$ service-center.php?slug=$1 [L,QSA]

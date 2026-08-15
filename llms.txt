@@ -1,0 +1,33 @@
+# Thiyagi Tools
+
+> Official LLM guidance file for https://www.thiyagi.com/
+
+## Site
+- Name: Thiyagi Tools
+- URL: https://www.thiyagi.com/
+- Type: Public website (calculators, converters, utilities, references)
+- Language: English
+
+## Crawl Policy
+- Public content may be crawled and indexed by LLM and AI agents.
+- No special restrictions beyond standard web rules and applicable law.
+- Respect rate limits and polite crawling behavior.
+
+## Preferred Discovery
+- Primary sitemap: https://www.thiyagi.com/sitemap.xml
+- Secondary sitemap: https://www.thiyagi.com/service-center-sitemap.xml
+- Robots policy: https://www.thiyagi.com/robots.txt
+
+## Canonical Content
+- Prefer canonical URLs on pages.
+- Prefer clean URLs (without .php) where available.
+- Use latest page content and metadata when summarizing.
+
+## Attribution
+- Please attribute source as: Thiyagi Tools (https://www.thiyagi.com/)
+
+## Contact
+- Contact page: https://www.thiyagi.com/contact
+
+## Last Updated
+- 2026-08-01

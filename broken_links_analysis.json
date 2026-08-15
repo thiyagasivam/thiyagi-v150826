@@ -1,0 +1,19 @@
+{
+    "total_files_scanned": 741,
+    "files_with_broken_links": 2,
+    "total_broken_links": 3,
+    "broken_links_by_file": {
+        "broken-link-checker-temp.php": [
+            "*.php",
+            "\/path\/file.php"
+        ],
+        "fix_broken_links.php": [
+            "broken.php"
+        ]
+    },
+    "unique_broken_links": [
+        "*.php",
+        "\/path\/file.php",
+        "broken.php"
+    ]
+}

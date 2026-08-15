@@ -1,0 +1,97 @@
+-- Bikes module schema (MySQL)
+-- Run this in database: u662933183_bikes
+
+CREATE TABLE IF NOT EXISTS bike_brands (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(120) NOT NULL,
+    slug VARCHAR(160) NOT NULL UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS bike_models (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    brand_id INT UNSIGNED NOT NULL,
+    model_name VARCHAR(180) NOT NULL,
+    slug VARCHAR(220) NOT NULL UNIQUE,
+    body_type VARCHAR(80) DEFAULT NULL,
+    fuel_type VARCHAR(80) DEFAULT NULL,
+    displacement_cc VARCHAR(40) DEFAULT NULL,
+    ex_showroom_price VARCHAR(80) DEFAULT NULL,
+    emi_info VARCHAR(120) DEFAULT NULL,
+    hero_image_url TEXT,
+    source_url TEXT,
+    source_name VARCHAR(120) DEFAULT 'BikeCentral',
+    credit_text VARCHAR(255) DEFAULT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    CONSTRAINT fk_bike_models_brand FOREIGN KEY (brand_id) REFERENCES bike_brands(id)
+        ON DELETE RESTRICT ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS bike_highlights (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    model_id BIGINT UNSIGNED NOT NULL,
+    label_name VARCHAR(120) NOT NULL,
+    label_value VARCHAR(255) DEFAULT NULL,
+    sort_order INT DEFAULT 0,
+    CONSTRAINT fk_bike_highlights_model FOREIGN KEY (model_id) REFERENCES bike_models(id)
+        ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS bike_key_features (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    model_id BIGINT UNSIGNED NOT NULL,
+    feature_name VARCHAR(180) NOT NULL,
+    sort_order INT DEFAULT 0,
+    CONSTRAINT fk_bike_key_features_model FOREIGN KEY (model_id) REFERENCES bike_models(id)
+        ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS bike_variants (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    model_id BIGINT UNSIGNED NOT NULL,
+    variant_name VARCHAR(200) NOT NULL,
+    ex_showroom_price VARCHAR(80) DEFAULT NULL,
+    brake_type VARCHAR(80) DEFAULT NULL,
+    tyre_type VARCHAR(80) DEFAULT NULL,
+    wheel_type VARCHAR(120) DEFAULT NULL,
+    image_url TEXT,
+    color_name VARCHAR(80) DEFAULT NULL,
+    sort_order INT DEFAULT 0,
+    CONSTRAINT fk_bike_variants_model FOREIGN KEY (model_id) REFERENCES bike_models(id)
+        ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS bike_colors (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    model_id BIGINT UNSIGNED NOT NULL,
+    color_name VARCHAR(80) NOT NULL,
+    image_url TEXT,
+    sort_order INT DEFAULT 0,
+    CONSTRAINT fk_bike_colors_model FOREIGN KEY (model_id) REFERENCES bike_models(id)
+        ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS bike_specs (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    model_id BIGINT UNSIGNED NOT NULL,
+    spec_group VARCHAR(120) NOT NULL,
+    spec_label VARCHAR(180) NOT NULL,
+    spec_value VARCHAR(255) DEFAULT NULL,
+    sort_order INT DEFAULT 0,
+    CONSTRAINT fk_bike_specs_model FOREIGN KEY (model_id) REFERENCES bike_models(id)
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    INDEX idx_bike_specs_model_group (model_id, spec_group)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS bike_source_snapshots (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    model_id BIGINT UNSIGNED NOT NULL,
+    source_url TEXT NOT NULL,
+    content_hash CHAR(64) DEFAULT NULL,
+    fetched_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    notes TEXT,
+    CONSTRAINT fk_bike_source_snapshots_model FOREIGN KEY (model_id) REFERENCES bike_models(id)
+        ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

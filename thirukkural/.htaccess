@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Redirect individual kural pages
+RewriteRule ^kural/([^/]+)/?$ kural/index.php?url=$1 [L,QSA]
+
+# Remove .php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Add trailing slash to directories
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule ^(.*)$ $1/ [L,R=301]

@@ -1,0 +1,237 @@
+﻿=== BROKEN LINKS REPORT ===
+
+Total Broken Links Found: 104 unique broken links
+Total References: 165 broken link references
+Files Containing Broken Links: 21 files
+
+========================================
+
+FILE: uuid-generator.php
+Broken Links (20):
+  - Line 1224: qr-code-generator.php
+  - Line 1225: password-generator.php
+  - Line 1226: json-formatter.php
+  - Line 1227: base64-encode-decode.php
+  - Line 1228: url-encoder-decoder.php
+  - Line 736: password-generator.php
+  - Line 737: qr-code-generator.php
+  - Line 738: random-number-generator.php
+  - Line 746: json-formatter.php
+  - Line 752: base64-encode-decode.php
+  - Line 753: url-encoder-decoder.php
+  - Line 754: md5-hash-generator.php
+  - Line 842: xml-beautifier.php
+  - Line 843: sql-formatter.php
+  - Line 844: code-editor.php
+  - Line 946: password-generator.php
+  - Line 947: sha256-hash-generator.php
+  - Line 948: md5-hash-generator.php
+  - Line 952: random-string-generator.php
+  - Line 953: token-generator.php
+
+FILE: drop-to-milliliter.php
+Broken Links (15):
+  - Line 191: drop-to-teaspoon.php
+  - Line 192: drop-calculator.php
+  - Line 200: ml-to-oz.php
+  - Line 206: liter-to-gallon-us.php
+  - Line 317: body-fat-calculator.php
+  - Line 318: calorie-calculator.php
+  - Line 321: pregnancy-calculator.php
+  - Line 323: water-intake-calculator.php
+  - Line 361: ratio-calculator.php
+  - Line 362: dilution-calculator.php
+  - Line 365: molarity-calculator.php
+  - Line 366: concentration-calculator.php
+  - Line 367: volume-calculator.php
+  - Line 596: ml-to-oz.php
+  - Line 597: liter-to-gallon-us.php
+
+FILE: sitemap-generator.php
+Broken Links (14):
+  - Line 1140: broken-links-finder.php
+  - Line 1141: page-speed-analyzer.php
+  - Line 1142: seo-audit-tool.php
+  - Line 1149: backlink-analyzer.php
+  - Line 1150: duplicate-content-checker.php
+  - Line 1245: url-encoder-decoder.php
+  - Line 1246: htaccess-generator.php
+  - Line 1250: canonical-url-checker.php
+  - Line 1251: ssl-checker.php
+  - Line 1252: uptime-monitor.php
+  - Line 1496: canonical-checker.php
+  - Line 1497: broken-links-finder.php
+  - Line 1498: page-speed-analyzer.php
+  - Line 1499: ssl-checker.php
+
+FILE: pixel-x-to-centimeter.php
+Broken Links (13):
+  - Line 192: pixel-to-inch.php
+  - Line 193: inch-to-pixel.php
+  - Line 207: color-picker.php
+  - Line 209: ratio-calculator.php
+  - Line 209: aspect-ratio-calculator.php
+  - Line 304: image-compressor.php
+  - Line 306: font-size-converter.php
+  - Line 309: css-unit-converter.php
+  - Line 309: unit-converter.php
+  - Line 539: inch-to-pixel.php
+  - Line 541: dpi-calculator.php
+  - Line 542: aspect-ratio-calculator.php
+  - Line 542: ratio-calculator.php
+
+FILE: cc-to-ml.php
+Broken Links (13):
+  - Line 450: ml-to-oz.php
+  - Line 451: liter-to-gallon-us.php
+  - Line 569: body-fat-calculator.php
+  - Line 570: calorie-calculator.php
+  - Line 573: pregnancy-calculator.php
+  - Line 575: water-intake-calculator.php
+  - Line 613: molarity-calculator.php
+  - Line 614: dilution-calculator.php
+  - Line 617: density-calculator.php
+  - Line 618: ph-calculator.php
+  - Line 619: unit-converter.php
+  - Line 848: ml-to-oz.php
+  - Line 849: liter-to-gallon-us.php
+
+FILE: javascript-beautifier.php
+Broken Links (13):
+  - Line 195: xml-beautifier.php
+  - Line 209: json-formatter.php
+  - Line 210: base64-encode-decode.php
+  - Line 211: url-encoder-decoder.php
+  - Line 307: word-counter.php
+  - Line 349: password-generator.php
+  - Line 350: qr-code-generator.php
+  - Line 697: json-formatter.php
+  - Line 698: xml-beautifier.php
+  - Line 699: sql-formatter.php
+  - Line 700: markdown-editor.php
+  - Line 701: code-editor.php
+  - Line 702: regex-tester.php
+
+FILE: kbps-to-mbps.php
+Broken Links (11):
+  - Line 214: mbps-to-gbps.php
+  - Line 215: gbps-to-mbps.php
+  - Line 229: time-calculator.php
+  - Line 229: download-time-calculator.php
+  - Line 230: bandwidth-calculator.php
+  - Line 231: data-transfer-calculator.php
+  - Line 341: ratio-calculator.php
+  - Line 344: time-calculator.php
+  - Line 463: md5-hash-generator.php
+  - Line 693: mbps-to-gbps.php
+  - Line 696: time-calculator.php
+
+FILE: ppf-calculator.php
+Broken Links (10):
+  - Line 260: epf-calculator.php
+  - Line 261: nps-calculator.php
+  - Line 275: tax-calculator.php
+  - Line 275: income-tax-calculator.php
+  - Line 378: retirement-calculator.php
+  - Line 379: goal-planning-calculator.php
+  - Line 385: tax-saving-calculator.php
+  - Line 626: retirement-calculator.php
+  - Line 630: income-tax-calculator.php
+  - Line 630: tax-calculator.php
+
+FILE: kb-to-gb.php
+Broken Links (10):
+  - Line 329: byte-to-kb.php
+  - Line 330: byte-to-mb.php
+  - Line 338: kb-to-tb.php
+  - Line 346: gb-to-tb.php
+  - Line 347: tb-to-gb.php
+  - Line 467: gb-to-tb.php
+  - Line 468: binary-to-decimal.php
+  - Line 473: mbps-to-gbps.php
+  - Line 715: gb-to-tb.php
+  - Line 716: byte-to-gb.php
+
+FILE: ml-to-teaspoon.php
+Broken Links (8):
+  - Line 443: teaspoon-to-tablespoon.php
+  - Line 444: teaspoon-to-cup.php
+  - Line 452: ml-to-oz.php
+  - Line 458: liter-to-gallon-us.php
+  - Line 689: fraction-calculator.php
+  - Line 690: ratio-calculator.php
+  - Line 695: time-calculator.php
+  - Line 927: fraction-calculator.php
+
+FILE: tablespoons-to-cups.php
+Broken Links (8):
+  - Line 695: tablespoons-to-teaspoons.php
+  - Line 699: teaspoons-to-tablespoons.php
+  - Line 703: cups-to-ml.php
+  - Line 711: ounces-to-cups.php
+  - Line 715: cups-to-ounces.php
+  - Line 719: gallons-to-ounces.php
+  - Line 723: ounces-to-gallons.php
+  - Line 735: pints-to-cups.php
+
+FILE: towing-estimate-calculator.php
+Broken Links (6):
+  - Line 1175: tip-calculator.php
+  - Line 797: liter-to-gallon-us.php
+  - Line 906: investment-calculator.php
+  - Line 909: savings-calculator.php
+  - Line 910: tip-calculator.php
+  - Line 911: tax-calculator.php
+
+FILE: feet-to-inches.php
+Broken Links (6):
+  - Line 674: yard-to-inches.php
+  - Line 678: inches-to-yard.php
+  - Line 686: inches-to-meter.php
+  - Line 690: km-to-feet.php
+  - Line 694: feet-to-km.php
+  - Line 698: micrometer-to-feet.php
+
+FILE: mile-statute-to-kilometer.php
+Broken Links (5):
+  - Line 309: kilometer-to-mile-statute.php
+  - Line 317: km-to-meter.php
+  - Line 440: time-calculator.php
+  - Line 683: kilometer-to-mile-statute.php
+  - Line 685: km-to-meter.php
+
+FILE: milligram-liter-to-part-million-ppm.php
+Broken Links (4):
+  - Line 151: ppm-to-mg-l.php
+  - Line 154: ppm-to-percent.php
+  - Line 157: molarity-to-ppm.php
+  - Line 160: ppb-to-ppm.php
+
+FILE: knot-to-mph.php
+Broken Links (3):
+  - Line 269: knot-to-kmh.php
+  - Line 272: mph-to-kmh.php
+  - Line 275: mps-to-mph.php
+
+FILE: square-inch-to-square-foot.php
+Broken Links (2):
+  - Line 199: square-inch-to-square-cm.php
+  - Line 202: square-foot-to-square-meter.php
+
+FILE: quart-to-cups.php
+Broken Links (1):
+  - Line 185: quart-to-pint.php
+
+FILE: gb-to-kb.php
+Broken Links (1):
+  - Line 188: gb-to-tb.php
+
+FILE: fluid-ounce-us-to-milliliter.php
+Broken Links (1):
+  - Line 202: ml-to-fluid-ounce.php
+
+FILE: fluid-ounce-us-to-gallon-us.php
+Broken Links (1):
+  - Line 188: pint-to-fluid-ounce.php
+
+
