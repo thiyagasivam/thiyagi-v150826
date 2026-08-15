@@ -36,5 +36,7 @@ User-agent: Amazonbot
 Allow: /
 
 # Sitemaps
+Sitemap: https://www.thiyagi.com/sitemap-index.xml
 Sitemap: https://www.thiyagi.com/sitemap.xml
 Sitemap: https://www.thiyagi.com/service-center-sitemap.xml
+Sitemap: https://www.thiyagi.com/image-sitemap.xml

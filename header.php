@@ -99,6 +99,68 @@ $metaKeywords = isset($pageKeywords) && is_string($pageKeywords) ? trim($pageKey
   <script src="https://cdn.tailwindcss.com"></script>
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="<?php echo htmlspecialchars($canonicalUrl); ?>" />
+  
+  <!-- Open Graph Meta Tags for Social Media Sharing -->
+  <meta property="og:title" content="<?php echo htmlspecialchars($metaTitle, ENT_QUOTES, 'UTF-8'); ?>">
+  <meta property="og:description" content="<?php echo htmlspecialchars($metaDescription, ENT_QUOTES, 'UTF-8'); ?>">
+  <meta property="og:url" content="<?php echo htmlspecialchars($canonicalUrl, ENT_QUOTES, 'UTF-8'); ?>">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.thiyagi.com/nt.png">
+  <meta property="og:image:alt" content="Thiyagi Tools Logo">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Thiyagi Tools">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<?php echo htmlspecialchars($metaTitle, ENT_QUOTES, 'UTF-8'); ?>">
+  <meta name="twitter:description" content="<?php echo htmlspecialchars($metaDescription, ENT_QUOTES, 'UTF-8'); ?>">
+  <meta name="twitter:image" content="https://www.thiyagi.com/nt.png">
+  <meta name="twitter:image:alt" content="Thiyagi Tools Logo">
+  <meta name="twitter:creator" content="@Support_Thiyagi">
+  <meta name="twitter:site" content="@Support_Thiyagi">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Thiyagi Tools",
+    "url": "https://www.thiyagi.com",
+    "logo": "https://www.thiyagi.com/nt.png",
+    "description": "Free online calculators, converters, and digital tools for professionals, developers, and content creators.",
+    "sameAs": [
+      "https://www.facebook.com/people/Thiyagi/61578685081802/",
+      "https://x.com/Support_Thiyagi",
+      "https://www.instagram.com/thiyagi2026/",
+      "https://www.linkedin.com/company/thiyagi/",
+      "https://in.pinterest.com/1164k7n16zy1l7pqu1d941kpjx7wva/"
+    ],
+    "contact": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "url": "https://www.thiyagi.com/contact"
+    }
+  }
+  </script>
+  
+  <!-- Website Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Thiyagi Tools",
+    "url": "https://www.thiyagi.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.thiyagi.com/?search={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1381776395680802"
      crossorigin="anonymous"></script>
      <meta name="google-adsense-account" content="ca-pub-1381776395680802">
