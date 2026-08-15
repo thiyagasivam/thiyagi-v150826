@@ -77,11 +77,41 @@
             </div>
         </div>
 
-        <!-- Copyright -->
+        <!-- Last Updated Date & Copyright -->
         <div class="border-t border-gray-700 pt-6 mt-6">
+            <div class="text-center text-gray-500 pb-3">
+                <p class="text-sm mb-2">
+                    <i class="fas fa-calendar-alt text-blue-400 mr-2"></i>
+                    Last Updated: <span id="currentDate" class="font-semibold text-gray-300"></span>
+                </p>
+            </div>
             <div class="text-center text-gray-500 pb-6">
                 <p>Copyrights &copy; <script>document.write(new Date().getFullYear())</script> All Rights Reserved by Thiyagi</p>
             </div>
         </div>
+
+        <!-- Auto-Updating Date Script -->
+        <script>
+            function updateDate() {
+                const today = new Date();
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                const formattedDate = today.toLocaleDateString('en-US', options);
+                document.getElementById('currentDate').textContent = formattedDate;
+            }
+            
+            // Update date on page load
+            updateDate();
+            
+            // Update date at midnight (for daily changes)
+            setInterval(function() {
+                const now = new Date();
+                const tomorrow = new Date(now);
+                tomorrow.setDate(tomorrow.getDate() + 1);
+                tomorrow.setHours(0, 0, 0, 0);
+                
+                const timeUntilMidnight = tomorrow - now;
+                setTimeout(updateDate, timeUntilMidnight);
+            }, 1000);
+        </script>
     </div>
 </footer>
