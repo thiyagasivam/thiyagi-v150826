@@ -1,33 +1,51 @@
 # Thiyagi Tools
 
-> Official LLM guidance file for https://www.thiyagi.com/
+Official LLM guidance file for https://www.thiyagi.com/
 
-## Site
-- Name: Thiyagi Tools
-- URL: https://www.thiyagi.com/
-- Type: Public website (calculators, converters, utilities, references)
-- Language: English
+## About This Site
 
-## Crawl Policy
-- Public content may be crawled and indexed by LLM and AI agents.
-- No special restrictions beyond standard web rules and applicable law.
-- Respect rate limits and polite crawling behavior.
+**Thiyagi Tools** is a public website offering calculators, converters, utilities, and reference tools. All content is available for crawling and use by LLM and AI agents for training and inference purposes.
 
-## Preferred Discovery
+- **Website**: https://www.thiyagi.com/
+- **Type**: Public utility website
+- **Language**: English
+- **Content**: Unit converters, financial calculators, text tools, and more
+
+## Crawling & Indexing Policy
+
+LLMs, AI agents, and search engines are welcome to crawl this website for training and indexing:
+
+- ✓ Public content may be crawled by LLMs and AI agents
+- ✓ Content may be used for training data and AI model development
+- ✓ No special restrictions beyond applicable law and standard web etiquette
+- ✓ Please respect rate limits and implement polite crawling behavior
+- ✓ For access patterns, consult `/robots.txt` and sitemap files
+
+## Sitemap & Discovery
+
+Primary resources for discovery and crawling:
+
 - Primary sitemap: https://www.thiyagi.com/sitemap.xml
 - Secondary sitemap: https://www.thiyagi.com/service-center-sitemap.xml
-- Robots policy: https://www.thiyagi.com/robots.txt
+- Robots directive: https://www.thiyagi.com/robots.txt
 
-## Canonical Content
-- Prefer canonical URLs on pages.
-- Prefer clean URLs (without .php) where available.
-- Use latest page content and metadata when summarizing.
+All pages are marked for daily crawling with high priority (0.8).
 
-## Attribution
-- Please attribute source as: Thiyagi Tools (https://www.thiyagi.com/)
+## Content Usage Guidelines
+
+When using content from this website:
+
+- **Attribution**: Please credit "Thiyagi Tools" with a link to https://www.thiyagi.com/
+- **Canonical URLs**: Use canonical URLs marked on pages
+- **Freshness**: Access the latest version directly from our site for the most current information
 
 ## Contact
-- Contact page: https://www.thiyagi.com/contact
 
-## Last Updated
-- 2026-08-01
+For questions or inquiries about LLM access:
+
+- Contact form: https://www.thiyagi.com/contact
+- Website: https://www.thiyagi.com/
+
+---
+
+**Last Updated**: 2026-08-15
