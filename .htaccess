@@ -137,14 +137,16 @@ RewriteRule ^calculators/nbfc/[^/]+/?$ - [L,R=410]
 RewriteRule ^shop/ - [L,R=410]
 RewriteRule ^product/ - [L,R=410]
 
-# Non-existent holiday pages
+# Non-existent holiday pages - Block tool pages but ALLOW index
 RewriteRule ^holiday/(france|northern-ireland|isle-of-man|guernsey)-holidays\.php$ - [L,R=410]
 RewriteRule ^holiday/(nova-scotia|quebec|saskatchewan|british-columbia)-holidays\.php$ - [L,R=410]
 RewriteRule ^holiday/(new-south-wales)-holidays\.php$ - [L,R=410]
-RewriteRule ^holiday/(usa-holiday|australia-holidays|uk-holiday/england-cities|indian-holiday)/(index|sip-calculator|emi-calculator|lumpsum-calculator|fd-calculator|rd-calculator|ppf-calculator|sukanya-samriddhi-yojana-calculator|loan-calculator|html-minifier|html-beautifier|css-minifier|css-beautifier|javascript-beautifier|javascript-minifier|json-viewer|privacy|about|step-up-sip-calculator|fix-state-pages)$ - [L,R=410]
+# Block specific tool sub-pages (e.g. /holiday/usa-holiday/sip-calculator) but allow /holiday/usa-holiday/index
+RewriteRule ^holiday/(usa-holiday|australia-holidays|uk-holiday/england-cities|indian-holiday)/(sip-calculator|emi-calculator|lumpsum-calculator|fd-calculator|rd-calculator|ppf-calculator|sukanya-samriddhi-yojana-calculator|loan-calculator|html-minifier|html-beautifier|css-minifier|css-beautifier|javascript-beautifier|javascript-minifier|json-viewer|privacy|about|step-up-sip-calculator|fix-state-pages)$ - [L,R=410]
 
-# Service center/electricity board tool pages
-RewriteRule ^(service-center|electricity-board|rto-details)/(index|contact|privacy|sip-calculator|emi-calculator|fd-calculator|rd-calculator|ppf-calculator|sukanya-samriddhi-yojana-calculator|html-minifier|html-beautifier|css-minifier|javascript-beautifier|breadcrumb-schema)$ - [L,R=410]
+# Service center/electricity board tool pages - Block specific sub-pages but ALLOW index
+# Only block non-index tool pages that shouldn't exist here
+RewriteRule ^(service-center|electricity-board|rto-details)/(contact|privacy|sip-calculator|emi-calculator|fd-calculator|rd-calculator|ppf-calculator|sukanya-samriddhi-yojana-calculator|html-minifier|html-beautifier|css-minifier|javascript-beautifier|breadcrumb-schema)$ - [L,R=410]
 
 # Non-existent service center specific pages
 RewriteRule ^service-center/xiaomi/aurangabad-authorized-service-center-1$ - [L,R=410]

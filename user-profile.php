@@ -2,7 +2,6 @@
 
 <title>My Profile - Thiyagi</title>
 <meta name="description" content="Your Thiyagi user profile. View your account details and manage your preferences.">
-<meta name="robots" content="noindex, nofollow">
 
 <style>
   .profile-card { max-width: 600px; }

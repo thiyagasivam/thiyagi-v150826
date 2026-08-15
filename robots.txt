@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
 
+# Disallow authentication-required pages
+Disallow: /user-profile
+
 # Explicit allow for common AI crawlers (no restrictions)
 User-agent: GPTBot
 Allow: /
