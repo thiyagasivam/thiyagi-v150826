@@ -1128,14 +1128,7 @@
                         </div>
                     </a>
                 </div>
-                <div>
-                    <a href="https://www.thiyagi.com/redirect-checker" class="block no-underline">
-                        <div class="tool-card border-l-web">
-                            <i class="fas fa-directions text-web"></i>
-                            <span class="font-medium text-gray-700">Redirect Checker</span>
-                        </div>
-                    </a>
-                </div>
+                
                 <div>
                     <a href="https://www.thiyagi.com/open-graph-generator" class="block no-underline">
                         <div class="tool-card border-l-web">

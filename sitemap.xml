@@ -4566,12 +4566,7 @@
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://www.thiyagi.com/redirect-checker.php</loc>
-    <lastmod>2026-01-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
+
   <url>
     <loc>https://www.thiyagi.com/robots-txt-generator.php</loc>
     <lastmod>2026-01-03</lastmod>
