@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'About Thiyagi Tools 2026 - 20+ Years of Digital Excellence | Professional Online Tools';
+$pageTitle = 'About Thiyagi Tools 2026 - 25+ Years of Digital Excellence | Professional Online Tools';
 $pageDescription = 'Learn about Thiyagi Tools - your trusted source for professional online calculators, converters, and digital tools. Built with 25+ years of expertise to serve millions of users worldwide in 2026.';
 $pageKeywords = 'About Thiyagi Tools, online calculators, digital tools, web utilities, professional tools 2026, 25 years experience';
 include 'header.php';
